@@ -1,0 +1,22 @@
+
+
+
+magick convert ./images/carousel/Architecte_SB_1.webp -resize 480 ./images/carousel/Architecte_SB_1-480w.webp
+magick convert ./images/carousel/Architecte_SB_1.webp -resize 800 ./images/carousel/Architecte_SB_1-800w.webp
+magick convert ./images/carousel/Architecte_SB_1.webp -resize 1200 ./images/carousel/Architecte_SB_1-1200w.webp
+
+magick convert ./images/carousel/Argent_Bank_2.webp -resize 480 ./images/carousel/Argent_Bank_2-480w.webp
+magick convert ./images/carousel/Argent_Bank_2.webp -resize 800 ./images/carousel/Argent_Bank_2-800w.webp
+magick convert ./images/carousel/Argent_Bank_2.webp -resize 1200 ./images/carousel/Argent_Bank_2-1200w.webp
+
+magick convert ./images/carousel/Nina_C_2.webp -resize 480 ./images/carousel/Nina_C_2-480w.webp
+magick convert ./images/carousel/Nina_C_2.webp -resize 800 ./images/carousel/Nina_C_2-800w.webp
+magick convert ./images/carousel/Nina_C_2.webp -resize 1200 ./images/carousel/Nina_C_2-1200w.webp
+
+magick convert ./images/carousel/Qwenta_1.webp -resize 480 ./images/carousel/Qwenta_1-480w.webp
+magick convert ./images/carousel/Qwenta_1.webp -resize 800 ./images/carousel/Qwenta_1-800w.webp
+magick convert ./images/carousel/Qwenta_1.webp -resize 1200 ./images/carousel/Qwenta_1-1200w.webp
+
+magick convert ./images/carousel/Kasa_2.webp -resize 480 ./images/carousel/Kasa_2-480w.webp
+magick convert ./images/carousel/Kasa_2.webp -resize 800 ./images/carousel/Kasa_2-800w.webp
+magick convert ./images/carousel/Kasa_2.webp -resize 1200 ./images/carousel/Kasa_2-1200w.webp
