@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "imagemagick-cli": "^0.5.0"
+  }
+}

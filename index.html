@@ -29,15 +29,15 @@ ScrollEffects js + particles js + contact Form js + carrousel js + lottieAnimati
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 		
 		<!-- Priorize LCP (Large Contentful Paint) for 1st pic / add attribute "as="image" for better reactivity-->
-		<!-- <link rel="preload" as="image" 
+		<link rel="preload" as="image" 
 			href="https://catalysepro.github.io/OC_P12/images/various/hands-on-a-laptop.webp" 
 			imagesrcset="
-			https://catalysepro.github.io/OC_P9/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-480w.webp 480w,
-			https://catalysepro.github.io/OC_P9/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-800w.webp 800w,
-			https://catalysepro.github.io/OC_P9/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1200w.webp 1200w
+			https://catalysepro.github.io/OC_P12/images/various/hands-on-a-laptop-480w.webp 480w,
+			https://catalysepro.github.io/OC_P12/images/various/hands-on-a-laptop-800w.webp 800w,
+			https://catalysepro.github.io/OC_P12/images/various/hands-on-a-laptop-1200w.webp 1200w
 			" 
 			imagesizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
-		> -->
+		>
 
 		<!--Style -->
 		<link rel="stylesheet" href="./styles/style.css">
@@ -184,7 +184,7 @@ ScrollEffects js + particles js + contact Form js + carrousel js + lottieAnimati
 										<div class="flip-card">
 											<div class="flip-card-front">
 												<img src="./images/icons/icon-envelope-open-text-3-middle-blue-empty.svg" 
-												alt="Contact" id="icon-contact">
+												alt="icone d'une enveloppe ouverte avec une lettre apparente" id="icon-contact">
 											</div>
 											<div class="flip-card-back" id="header-back-card-4">
 												CONTACT
@@ -205,7 +205,18 @@ ScrollEffects js + particles js + contact Form js + carrousel js + lottieAnimati
 	
 			<section class="section section_2 secret " id="section-2" aria-label="Section Propos avec image">
 				<div class="sub_section_2 sub_section_2_1 video main_symbol">
-					<img src="./images/various/hands-on-a-laptop.webp" alt="mains sur un clavier d'ordinateur portable" class="img_presentation_1" id="img-presentation-1">
+
+					<img 
+					src="./images/various/hands-on-a-laptop.webp" 
+					srcset="./images/various/hands-on-a-laptop-480w.webp 480w,
+							./images/various/hands-on-a-laptop-800w.webp 800w,
+							./images/various/hands-on-a-laptop-1200w.webp 1200w"
+					sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" 
+					width="100%" height="auto" 
+					class="img_presentation_1" id="img-presentation-1"
+					alt="mains sur un clavier d'ordinateur portable"
+					>
+
 				</div>
 				
 				<div class="sub_section_2 sub_section_2_2">
