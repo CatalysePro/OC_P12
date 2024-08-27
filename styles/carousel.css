@@ -1,0 +1,1107 @@
+
+/** carousel.css origin v12 linked to index v23 and style v21 + clickUrlOpenNewTab.js*/
+
+
+html {
+  font-size: 16px;
+}
+
+.carousel-container {
+  
+  width: 100%;
+  height: 100%;
+
+  max-height: 95vh;
+
+  /* display: flex; */
+
+  justify-items: center;
+  
+  /* flex: 1; */
+  margin: auto;
+
+  box-sizing: border-box;
+
+  /* background-color: red; */
+
+}
+
+.main-photo-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-height: 100%;
+  justify-content: center;
+  align-items: center;
+  
+
+  /* width:80%; /* affects width of photo chart vs miniatures' array*/
+
+  margin-bottom: 2.22vh;
+
+  height: 70%;
+
+}
+
+.main-photo {
+
+  width: 65%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+ 
+  object-fit: cover;
+  object-position: center;
+  
+  /* object-position: 40% 10%;  */
+  
+  border: 5px solid #ccc;
+  border-radius: 10px;
+
+  
+
+}
+
+.info-container {
+  position:relative;
+
+  width: 30%;
+  /* height: 100%; */
+  
+  height: fit-content;
+
+  padding-left: 1.25vw;
+
+  /* margin-top : -4.444vh; */
+
+  flex: 1;
+  margin: auto;
+
+
+  color:#3586ff;
+
+  /* background-color: grey; */
+
+}
+
+.info-container h2 {
+
+  align-content: center;
+
+  /* margin-bottom: 7px; */
+
+  padding-top: 0px;
+  color: #3586ff;
+
+  font-size: 1.125vw;
+
+  text-decoration: underline;
+
+  text-underline-offset: 0.556vh;
+
+  /* background-color: orange; */
+}
+
+.line_under_description {
+
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* width: fit-content; */
+  justify-content: space-between;
+
+  margin-bottom: 1.67vh;
+
+  /* background-color: aqua; */
+
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.line_under_description button {
+
+  width: 35%; /*! complementary to .api-usage-container*/
+}
+
+.api-usage-container {
+
+  /* width: auto; */
+  width: 65%; /*! complementary to .line_under_description button*/
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: flex-end;
+ 
+
+  /* background-color: brown; */
+}
+
+.api-usage-container label {
+
+  font-size: 1.2vw;
+  font-weight: 700;
+
+  color: #3586ff;
+}
+
+#api-usage { /*tick box*/
+
+  width: 0.8vw;
+  /* height: auto; */
+
+  aspect-ratio: 1 / 1;
+
+  border-radius: 5px;
+
+  margin-left: 0.313vw;
+
+  border: 2px solid #3586ff;
+  appearance: none; /* cancel default style */
+  -webkit-appearance: none; /* cancel default style for Safari */
+  outline: none; /* cancel border focus */
+  
+  position: relative; /* Necessary to position the tick */
+  background-color: transparent; 
+}
+
+#api-usage::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* width: 12px;
+  height: 12px; */
+
+  width: 0.75vw;
+  /* height: 1.33vh; */
+  aspect-ratio: 1 / 1;
+
+  background-color: transparent;
+  border: 2px solid #FFF;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  opacity: 0;
+  box-shadow: 0 0 0 2px #FFF; /* add a shadow to improve sharpness */
+}
+
+#api-usage:checked::before {
+  background-color: #FFF;
+  opacity: 1;
+}
+
+
+.pie-chart-container {
+
+  justify-items: center;
+  align-items: center;
+
+
+  background-color: #FFF;
+  border: 0.1px solid transparent;
+  border-radius: 8px;
+}
+
+.pie-chart-container canvas {
+
+  
+  width: 100%;
+  height: fit-content;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+#photo-description {
+
+  width: 100%;
+  max-width: 100%; /* do not exceed parent's width*/
+  
+  overflow: hidden;
+  
+  height:100%;
+
+  /* margin-right: 0.313vw; */
+  /* margin: auto 0.222vw auto 0.222vw; */
+  margin-left: auto;
+  margin-right: auto;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6; /* used by some browsers */
+
+  white-space: normal;
+  text-overflow: ellipsis; /*for dotted effect*/
+  
+  max-height: calc(1.2em * 6); /* Adjust according font size & lign height */
+  line-height: 1.2em; /* Adjust according font size */
+
+  font-size: 1vw;
+
+  /* background-color: violet; */
+
+}
+
+.modal_description {
+
+  display: none;
+  position: absolute; /* parent info-container*/
+  z-index: 1;
+  left: 2%;
+  top: 5%;
+
+  width: 96%;
+  /* height: auto; */
+  height: 70vh;
+
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  
+  /* padding: 15px;  */
+
+  padding-top: 1.67vh;
+  padding-right: 0.94vw;
+  padding-bottom: 1.67vh;
+  padding-left: 0.94vw;
+
+  /* in case of extended msg parent container in dark do not react to click for closing modal */
+
+}
+
+/*! CHECK HORIZONTAL SCROLL BAR APPEARENCE WITH PHONE LAYOUT*/
+.modal-content_description {
+  background-color: #d6e7ff;
+  
+  margin: 5% auto;
+
+  /* padding: 0px 10px 0px 10px; */
+
+  padding-top: 0vh;
+  padding-right: 0.625vw;
+  padding-bottom: 0vh;
+  padding-left: 0.625vw;
+
+
+  border: 1px solid #888;
+  
+  width: 100%;
+  max-width: 100%;
+
+  max-height: 70vh; /* Modal max height to allow scroll bar */
+
+  overflow-y: auto;
+  overflow-x: hidden; /* Hide horizontal  scrollbar si appearing */
+  box-sizing: border-box; /* Insure padding is include the width */
+  
+}
+
+
+
+/*? START STYLE <p> of description modal*/
+
+#photo-description p {
+
+  margin-bottom: 0.222vh !important;
+  padding: 0;
+
+  font-size: 1vw;
+
+}
+
+#photo-description p {
+  margin: 0 !important; 
+  /* margin: 0; erase all margin to avoid perturbing ellipsis effect */
+  padding: 0 !important;
+}
+
+#photo-description p:first-of-type {
+  font-weight: bold !important;
+}
+
+#full-description p {
+
+  font-size: 1vw;
+}
+
+/*? END STYLE <p> of description modal*/
+
+.close-button_description {
+
+  position: absolute;
+  top: -2vh;
+  right: 0.5vw;
+  color: red;
+  /* float: right; */
+
+  font-size: 2.5vw;
+  font-weight: bold;
+
+  padding: auto;
+   
+}
+
+.close-button_description:hover,
+.close-button_description:focus {
+  color: #3586ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.visit-website-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1.67vh;
+
+  /* background-color: green; */
+
+  
+}
+
+
+.visit-website-btn, .expand_description {
+
+  /* display: inline-block; */
+  align-items: center;
+  vertical-align: middle;
+
+
+  /* padding: 10px 15px; */
+  padding: 1.11vh 0.9375vw;
+ 
+  background-color: #FFF;
+  color: #0C5FCB;  /* #0C5FCB instead of #3586ff for a better contrast -Wave alert*/ 
+  text-decoration: none;
+
+  font-size: 0.875vw;
+
+  border:none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.visit-website-btn:hover, .expand_description:hover {
+  
+  background-color: #3586ff;
+  color: white;
+  
+}
+
+
+
+.pie-chart-container {
+  width: 100%;
+  height: 100%;
+
+  max-height: 33.33vh;
+
+  background-color: #d6e7ff;
+  
+}
+
+#photo-legend {
+
+  font-size: 0.8125vw;
+
+  font-style: italic;
+  color:#3586ff;
+}
+
+
+#main-photo {
+
+  margin-left: 0;
+}
+
+.thumbnails-container {
+
+  width: 65%; /* fits with main-photo width*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ /* border: 0.05px solid red; */
+
+}
+
+.thumbnails-wrapper {
+  display: flex;
+
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+  white-space: nowrap; /* maintain thumbnails on a row */
+
+
+  /* flex: 1; */ 
+  /*! flex: 1 prevent & block responive carousel template*/
+  
+  /* margin: 0 10px; */
+
+  margin: 0vh 0.625vw;
+
+  
+
+  background-color: #d6e7ff;
+  border: 0.5px solid #3586ff;;
+  border-radius: 5px ;
+
+  /* padding: 2px 5px 2px 5px; */
+  padding: 0.222vh 0.313vw;
+
+
+  padding-left: 0.313vw !important;
+
+}
+
+.thumbnails-wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+
+.thumbnail {
+
+
+  width: 6.25vw;
+  height: 11.11vh;
+
+  /* width: 100px; */
+  max-width: 100%;
+  
+  /* height: 100px; */
+  max-height: 100%;
+  
+  margin-right: 0.625vw;
+  margin-left: 0.625vw;
+  
+  cursor: pointer;
+  
+  border: 2px solid white;
+  border-radius: 5px;
+
+  object-fit: cover;
+  object-position: center; 
+  /* object-position: center; can use numerical values or % from top left border */
+
+
+  transition: border-color 0.3s;
+
+
+}
+
+.thumbnail:hover {
+  border-color: #007bff;
+}
+
+.thumbnail.active {
+  border-color: rgb(1, 18, 84);
+}
+
+.arrow {
+  background-color: #0C5FCB;  /* #0C5FCB instead of #3586ff for a better contrast -Wave alert*/
+  border: none;
+
+  /* padding: 10px; */
+  padding: 1.111vh 0.625vw;
+
+
+  cursor: pointer;
+  color: white;
+
+  font-size: 0.9375vw;
+
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+
+
+/*! PHONE AND TABLET STYLES */
+
+/*todo START responsive phone */
+
+/** Small devices (phones, less than 768px) could be 600px */
+@media only screen and (max-width: 600px) {
+
+  /** start GENERAL FONT-SIZE*/
+
+  .info-container h2 {
+
+    font-size: 4vw;
+
+  }
+
+  #photo-description, 
+  #photo-description p, 
+  #full-description p  {
+
+    font-size: 3.5vw;
+
+  }
+
+  .close-button_description {
+
+    font-size: 10vw;
+
+  }
+
+  .visit-website-btn, .expand_description {
+
+    font-size: 3.5vw;
+
+  }
+
+  #photo-legend {
+
+    font-size: 3vw;
+  
+  }
+
+  .arrow {
+
+    font-size: 6vw;
+
+  }
+
+  .api-usage-container label {
+
+    font-size: 3.5vw;
+
+  }
+
+  #api-usage { /*tick box*/
+
+    width: 7vw;
+    aspect-ratio: 1 / 1; /*repeat*/
+
+    margin:0;
+
+  }
+
+  /** end GENERAL FONT-SIZE*/
+
+  .carousel-container {
+
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+
+    flex: 1;
+    
+
+    /* background-color: orange; */
+
+  }
+
+  .main-photo-container {
+
+    /* background-color: yellow; */
+
+    margin-bottom: 1.111vh;
+
+  }
+
+
+  .main-photo {
+
+    display: none;
+
+  }
+
+  .pie-chart-container {
+
+    display: none;
+  }
+
+  .thumbnails-container {
+
+    width: 100%;
+    margin-bottom: 4vw;
+    
+  }
+
+  .thumbnails-wrapper {
+
+    padding:0;
+
+    /* width: 192px;
+    height: 192px; */
+
+    width: 60vw;
+    height: 21.33vh;
+
+    margin-bottom: 0.566vh;
+
+    border-width: 2px;
+
+    
+    /* background-color: orange; */
+  }
+
+  .arrow {
+
+    padding: 1.111vh 1.25vw ;
+
+    margin: 1.111vh 2.5vw;
+
+    font-size: 6vw; /*repeat in this responsive*/
+
+  }
+  
+  .thumbnail {
+
+    
+    width: 60vw;
+    height: 21.33vh;
+
+
+    border: 3px solid white;
+    
+    object-fit: cover;
+
+    /* margin: 0px 0px 0 -2px; */
+    margin: 0vh 0vw 0vh -0.222vh;
+    
+  }
+
+  .thumbnail.active {
+    border-color: #fff;
+  }
+
+  #main-photo {
+
+    margin-left: 0 !important;
+    
+  }
+
+  .info-container {
+
+    width: 90%;
+    height: fit-content;
+
+    margin-top: 1.111vh;
+
+    /* background-color: green; */
+  }
+
+
+  #photo-description {
+
+    width: 90%;
+    margin-top: 0;
+
+    /* background-color: yellow; */
+  }
+
+  
+
+  .line_under_description {
+
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    text-align: center;
+    
+    
+    width: 90%;
+
+    /* background-color: aqua; */
+  }
+
+  .line_under_description button {
+
+    margin-bottom: 1.67vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* width: 50%; */
+    
+  }
+
+  .api-usage-container {
+
+    width: 50%;
+
+    margin-left:auto;
+    margin-right: auto;
+
+    
+    /* background-color: brown; */
+}
+
+  #api-usage::before {
+
+    width: 3.33vw;
+    height: 1.56vh;
+  
+  }
+
+  .visit-website-container {
+
+    display:flex;
+    flex-direction: column;
+
+    width: 90%;
+
+    margin-left:auto;
+    margin-right: auto;
+
+    /* background-color: green; */
+  }
+
+  .visit-website-container button {
+
+    width: 90%;
+
+  }
+
+  .api-usage-container {
+
+    display: flex;
+    justify-content: center !important;
+    justify-items: center !important;
+
+    padding-left:auto;
+    padding-right: auto;
+
+    /* background-color: brown; */
+
+  }
+
+  #api-usage { /*tick box*/
+
+    margin:0;
+
+  }
+
+  #photo-legend {
+
+    margin-bottom: 1.111vh;
+  }
+
+  .modal_description {
+
+    height: 45vh;
+    overflow-y: auto;
+    overflow-y: hidden;
+  
+  }
+
+  .modal-content_description {
+
+    height: 100%;
+    text-align: left;
+  }
+
+
+}
+
+/*todo END responsive phone */
+
+/*? START responsive tablet */
+
+/** Medium devices (tablets, less/equal than 1024px) min widht could be 601 */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    
+
+  /*? start GENERAL FONT-SIZE*/
+
+  .info-container h2 {
+
+    font-size: 4vw;
+
+  }
+
+  #photo-description, 
+  #photo-description p, 
+  #full-description p  {
+
+    font-size: 2.3vw;
+
+  }
+
+  .close-button_description {
+
+    font-size: 7vw;
+
+  }
+
+  .visit-website-btn, .expand_description {
+
+    font-size: 2.3vw;
+
+  }
+
+  #photo-legend {
+
+    font-size: 2.3vw;
+    /* margin-bottom: 1vh; */
+  
+  }
+
+  .arrow {
+
+    font-size: 4vw;
+
+  }
+
+  .api-usage-container label {
+
+    font-size: 2.3vw;
+
+  }
+
+  #api-usage { /*tick box*/
+
+    width: 5vw;
+    aspect-ratio: 1 / 1; /*repeat*/
+
+    margin:0;
+
+  }
+
+  /*? end GENERAL FONT-SIZE*/
+
+  .carousel-container {
+
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+
+    flex: 1;
+    
+
+    /* background-color: orange; */
+
+  }
+
+  .main-photo-container {
+
+    /* background-color: yellow; */
+
+    margin-bottom: 1.111vh;
+
+  }
+
+  .main-photo {
+
+    display: none;
+
+  }
+
+  .pie-chart-container {
+
+    display: none;
+  }
+
+  .thumbnails-container {
+
+    width: 100%;
+    margin-bottom: 1vw;
+    
+  }
+
+
+  .thumbnails-wrapper {
+
+    padding:0;
+
+    /* 400:800 - 400:1156*/
+    width: 50vw;
+    height: 34.60vh;
+    /* aspect-ratio: 1 / 1; */
+
+    /* 320:800 - 320:1156*/
+    width: 40vw;
+    height: 27.68vh;
+
+    margin-bottom: 1.5vh;
+
+    border-width: 2px;
+    
+    /* background-color: orange; */
+  }
+
+  .arrow {
+
+    padding: 1.111vh 1.25vw ;
+
+    margin: 1.111vh 1.25vw;
+
+    font-size: 4vw; /*repeat in this responsive*/
+
+  }
+  
+  .thumbnail {
+
+    
+    /* width: 50vw;
+    height: 34.60vh; */
+    
+    width: 40vw;
+    height: 27.68vh;
+
+    border: 3px solid white;
+    
+    object-fit: cover;
+
+    /* margin: 0px 0px 0 -2px; */
+    margin: 0vh 0vw 0vh -0.222vh;
+    
+  }
+
+  .thumbnail.active {
+    border-color: #fff;
+  }
+
+  #main-photo {
+
+    margin-left: 0 !important;
+    
+  }
+
+  .info-container {
+
+    width: 90%;
+    height: fit-content;
+
+    margin-top: 1.67vh;
+
+    /* background-color: green; */
+  }
+
+
+  #photo-description {
+
+    width: 90%;
+    margin-top: 1.111vh;
+
+    /* background-color: yellow; */
+  }
+
+ 
+
+  .line_under_description {
+
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    text-align: center;
+    
+    
+    width: 90%;
+
+    /* background-color: aqua; */
+  }
+
+  .line_under_description button {
+
+    margin-bottom: 2vh;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* width: 50%; */
+    
+  }
+
+  .api-usage-container {
+
+    width: 50%;
+
+    margin-left:auto;
+    margin-right: auto;
+
+    
+    /* background-color: brown; */
+}
+
+  #api-usage::before {
+
+    width: 1.5vw;
+    height: 1.125vh;
+  
+  }
+
+  .visit-website-container {
+
+    display:flex;
+    flex-direction: column;
+
+    width: 90%;
+
+    margin-left:auto;
+    margin-right: auto;
+
+    background-color: green;
+  }
+
+  .visit-website-container button {
+
+    width: 90%;
+
+  }
+
+  .api-usage-container {
+
+    display: flex;
+    justify-content: center !important;
+    justify-items: center !important;
+
+    padding-left:auto;
+    padding-right: auto;
+
+    /* background-color: brown; */
+
+  }
+
+  #api-usage { /*tick box*/
+
+    margin:0;
+
+  }
+
+
+  #photo-legend {
+
+    margin-bottom: 2vh;
+  }
+
+  .modal_description {
+
+    height: 39vh;
+    overflow-y: auto;
+    overflow-y: hidden;
+
+
+  }
+
+  .modal-content_description {
+
+    height: 100%;
+    text-align: left;
+  }
+
+
+  }
+
+/*? END responsive tablet */

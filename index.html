@@ -1,0 +1,897 @@
+<!-- index origin v23 based on style css v_21 + services css v4 + carousel css v12 
+ScrollEffects js + particles js + contact Form js + carrousel js + lottieAnimation.js + + clickUrlOpenNewTab.js -->
+
+<!DOCTYPE html>
+<html lang="fr"> <!--language specification for better accessibilty-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"content="width=device-width, initial-scale=1.0">
+		<!-- Title tag-->
+		<title>Catalyse.Pro - Business Digital Scaler | Optimize your enterprise's performances with appropriate digital solutions</title>
+		
+		<!-- insert favicon code here under / for full customized favicon use use https://realfavicongenerator.net/ -->
+		<!-- <link rel="icon" href="https://catalysepro.github.io/OC_P9/assets/images/icon-camera.svg" type="image/svg+xml"> -->
+		
+		<!-- meta description-->
+		<meta name="description"content="Intégrateur Web : création d'interfaces web sur mesure, optimisation SEO, et gestion de projet full-stack.">
+	
+		<!-- preconnect to font domains already in place-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- add 2nd line at the beginning with attribute rel="preload" to font download + with attribute "as="style" for better reactivity-->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="style">
+		<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" as="style">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"  as="style">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		
+
+
+		<!--Style -->
+		<link rel="stylesheet" href="./styles/style.css">
+		<link rel="stylesheet" href="./styles/services.css">
+		<link rel="stylesheet" href="./styles/carousel.css">
+
+		<!-- CRITICAL SCRIPT-->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+		<!-- <script src="./scripts/contactForm.js"></script> -->
+		
+		<!-- PRELOAD NON CRITICAL SCRIPTS-->
+		<link rel="preload" href="./scripts/main.js"as="script">
+		<link rel="preload" href="./scripts/scrollEffects.js"as="script">
+		<link rel="preload" href="./scripts/servicesModals.js"as="script">
+		<link rel="preload" href="./scripts/carousel.js"as="script">
+		<link rel="preload" href="./scripts/clickUrlOpenNewTab.js"as="script">
+		<link rel="preload" href="./scripts/contactForm.js"as="script">
+		<link rel="preload" href="./scripts/creditsModal.js"as="script">
+
+		<!--todo style : add attribute "as="style" for better reactivity-->
+		<!-- <link rel="stylesheet" href="./assets/style.min.css" as="style"> -->
+
+
+		<!-- Twitter Card data : Chosen type :  Summary Card with Large Image  -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@catalysepro">
+		<meta name="twitter:title" content="Catalyse.Pro - Business Digital Scaler | Optimize your enterprise's performances with appropriate digital solutions">
+		<meta name="twitter:description" content="xxx">
+		<meta name="twitter:image" content="http://www.catalysepro.com/images/logos/logo-LTS_1.webp">
+		<meta name="twitter:image:alt" content="Logo Catalyse.Pro">
+	
+		<!-- Open Graph data : standard protocole shared by facebook/instagram, linkedin and others-->
+		<meta property="og:title" content="Catalyse.Pro - Business Digital Scaler | Optimize your enterprise's performances with appropriate digital solutions">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://www.catalysepro.com">
+		<meta property="og:image" content="http://www.catalysepro.com/images/logos/logo-LTS_1.webp">
+		<meta property="og:image:alt" content="Logo Catalyse.Pro">
+		<meta property="og:description" content="xxx">
+		<meta property="og:site_name" content="Catalyse.Pro">
+		<meta property="og:locale" content="fr_FR">
+		<meta property="og:image:type" content="image/webp">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+	
+		<!--  JSON-LD for rich snippets : micro-data for contact, physical ,location, business info and social networks  -->
+		<!--  serialization method with structered data JSON-LD : JavaScript Object Notation for Linked Data-->
+		<script type="application/ld+json"> 
+			{
+			"@context": "http://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Catalyse.Pro",
+			"image": "http://www.catalysepro.com/images/logos/logo-LTS_1.webp",
+			"telephone": "+33556677889",
+			"email": "contact@catalysepro.com",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "54 rue des acacias, 75017 Paris",
+				"addressLocality": "Paris",
+				"addressRegion": "Ile de France",
+				"postalCode": "75017",
+				"addressCountry": "FR"
+			},
+			"url": "http://www.catalysepro.com",
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "44.84680",
+				"longitude": "-0.60716"
+			},
+			"openingHours": "Mo-Fr 09:00-18:00",
+			"priceRange": "€",
+			"sameAs": [
+					"http://www.facebook.com/catalysepro",
+					"http://www.twitter.com/catalysepro",
+					"http://www.instagram.com/catalysepro"
+				]
+			}
+		</script>
+	</head>
+	<body>
+		
+		
+		<main role="main">
+			
+	
+			<section 	class="section section_1 dynamic_pres-section particles-section snowflakes-section" 
+						aria-label="Section principale avec effets visuels">
+				
+	
+				<header id="header" role="banner">
+					<div class="header_container" >
+						<a class="header_Logo_Name" href="#" aria-label="Retour à l'accueil">
+							<div class="logo_container">
+								<!-- Logo content -->
+								<img src="./images/logos/catalyse_logo_2_transparent.webp" alt="Catalyse Pro Logo" class="header_logo" id="header-logo">
+							</div>
+							<div class="header_name" id="header-name">
+								
+							</div>
+						</a>
+						<div class="nav" id="nav-header" role="navigation">   
+							<ul>
+	
+								<li><a data-scroll href="#section-2" id="link-section-2" aria-label="Aller à la section Propos">
+										<div class="flip-card">
+											<div class="flip-card-front">
+												<img src="./images/icons/icon-about-me-3-empty-middle-blue.svg" 
+												alt="Presentation" id="icon-presentation">
+											</div>
+											<div class="flip-card-back" id="header-back-card-1">
+												PROPOS
+											</div>
+										</div>
+									</a>
+								</li>
+	
+								<li><a data-scroll href="#section-3" id="link-section-3" aria-label="Aller à la section Services">
+										<div class="flip-card">
+											<div class="flip-card-front">
+												<img src="./images/icons/icon-playing-cards-2-middle-blue.svg" 
+												alt="Services" id="icon-services">
+											</div>
+											<div class="flip-card-back" id="header-back-card-2">
+												SERVICES
+											</div>
+										</div>
+									</a>
+								</li>
+	
+								<li><a data-scroll href="#section-4" id="link-section-4" aria-label="Aller à la section Réalisations">
+										<div class="flip-card">
+											<div class="flip-card-front">
+												<img src="./images/icons/icon-open-book-3-middle-blue-empty.svg" 
+												alt="Realisations" id="icon-realisations">
+											</div>
+											<div class="flip-card-back" id="header-back-card-3">
+												REALISATIONS
+											</div>
+										</div>
+									</a>
+								</li>
+	
+								<li><a data-scroll href="#section-5" id="link-section-5" aria-label="Aller à la section Contact">
+										<div class="flip-card">
+											<div class="flip-card-front">
+												<img src="./images/icons/icon-envelope-open-text-3-middle-blue-empty.svg" 
+												alt="Contact" id="icon-contact">
+											</div>
+											<div class="flip-card-back" id="header-back-card-4">
+												CONTACT
+											</div>
+										</div>
+									</a>
+								</li>
+	
+							</ul>
+						</div>
+						
+						
+					</div>
+				</header>
+				
+			
+			</section>
+	
+			<section class="section section_2 secret " id="section-2" aria-label="Section Propos avec image">
+				<div class="sub_section_2 sub_section_2_1 video main_symbol">
+					<img src="./images/various/hands-on-a-laptop.webp" alt="mains sur un clavier d'ordinateur portable" class="img_presentation_1" id="img-presentation-1">
+				</div>
+				
+				<div class="sub_section_2 sub_section_2_2">
+					
+					<div class="content ">
+						<h1>Intégrateur Web</h1>
+						<p class="line_1">Développeur front-end toujours en quête de nouvelles connaissances. 
+							Fort d'une expérience variée dans le développement web, j'allie créativité et techniques avancées 
+							pour créer des interfaces utilisateur attrayantes et performantes.</p>
+							
+						<p>Mon expertise en optimisation SEO garantit que vos projets ne sont pas seulement esthétiques, 
+							mais également visibles sur les moteurs de recherche. </p> 
+							
+						<p>Grâce à un réseau de développeurs spécialisés dans divers 
+							langages et technologies, nous offrons aussi des solutions full-stack.</p>
+							
+						<p>En tant que Responsable de Mission, je veille à ce que chaque étape soit réalisée avec rigueur et transparence, 
+							assurant une communication fluide et une livraison dans les délais. </p>
+	
+						<p>Mon objectif est de transformer vos idées en réalité tout en vous offrant un service sur mesure.</p>
+
+						<p>Ensemble optimisons vos projets numériques !</p>
+						
+					</div>
+					
+				</div>
+			</section>
+	
+			<section class="section section_3 services" id="section-3" aria-label="Section Services avec cartes descriptives">
+				<div class="watermark services_title">SERVICES</div>
+				<div class="container_services">
+					<div class="card rotate-right">
+						<div class="card-content card_1">
+							<div class="front">
+								<div>
+									<img src="./images/icons/icon-Interface-elements-1-full-dark-blue.svg" 
+									alt="Icone symbole d'interface web, rectangles et cercles" id="icon-service-project-front">
+								</div>
+								<h2>Création d'interfaces utilisateur</h2>
+							</div>
+							<div class="back">
+								<div class="inner-back">
+									<div>
+										<img src="./images/icons/icon-Interface-elements-1-full-dark-blue.svg" 
+										alt="Icone symbole d'interface web, rectangles et cercles" id="icon-service-project-back">
+									</div>
+									<p> 
+									Conception d'interfaces utilisateur innovantes et optimisées qui allient esthétique 
+									et performance pour une expérience utilisateur optimale...</p>
+									<a href="#" aria-label="Ouvre une fenêtre modale" role="button">En savoir plus</a>
+									<!-- <a href="#" aria-label="Ouvre une fenêtre modale" role="button" 
+									data-modal-target="services-modal1">En savoir plus</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card rotate-up">
+						<div class="card-content">
+							<div class="front">
+								<div>
+									<img src="./images/icons/icon-seo-1-full-dark-blue.svg" 
+									alt="Icone symbole d'optimisation par le numérique, graphe avec barre surmonté d'une courbe digitale" 
+									id="icon-service-optimization-front">
+								</div>
+								<h2>Optimisation SEO</h2>
+							</div>
+							<div class="back">
+								<div class="inner-back">
+									<div>
+										<img src="./images/icons/icon-seo-1-full-dark-blue.svg" 
+										alt="Icone symbole d'optimisation du SEO, loupe sur un pc avec un graphe" 
+										id="icon-service-optimization-back">
+									</div>
+									<p>Optimisation du référencement de vos applications existantes ou 
+										de vos projets web grâce à une expertise SEO avancée...</p>
+									<a href="#" aria-label="Ouvre une fenêtre modale" role="button">En savoir plus</a>
+									<!-- <a href="#" aria-label="Ouvre une fenêtre modale" role="button" 
+									data-modal-target="services-modal2">En savoir plus</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card rotate-left">
+						<div class="card-content">
+							<div class="front">
+								<div>
+									<img src="./images/icons/icon-project-plan-1-full-dark-blue.svg" 
+									alt="Icone symbole de gestion de projet, personnage, rouage et planning" 
+									id="icon-service-leadership-strategy-front">
+								</div>
+								<h2>Gestion de projet full-stack</h2>
+							</div>
+							<div class="back">
+								<div class="inner-back">
+									<div>
+										<img src="./images/icons/icon-project-plan-1-full-dark-blue.svg" 
+										alt="Icone symbole de gestion de projet, personnage, rouage et planning" 
+										id="icon-service-leadership-strategy-back">
+									</div>
+									<p> Gestion de projet full-stack par un Responsable de Mission dédié pour assurer une coordination 
+										fluide entre le client et les différentes équipes techniques...</p>
+									<a href="#" aria-label="Ouvre une fenêtre modale" role="button">En savoir plus</a>
+									<!-- <a href="#" aria-label="Ouvre une fenêtre modale" role="button" 
+									data-modal-target="services-modal3">En savoir plus</a> -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+	
+			<!-- START BACK CARD' MODALS -->
+	
+			<div id="services-modal1" class="services_modal">
+				<div class="services-modal-content">
+					<span class="modal_services_close"
+						aria-label="Ferme la fenêtre modale"
+						role="button"
+						>&times;
+					</span>
+					<div>
+						<img src="./images/icons/icon-Interface-elements-1-full-dark-blue.svg" 
+						alt="Icone symbole d'interface web, rectangles et cercles" 
+						id="icon-service-project-modal">
+					</div>
+					<h2> Création d'interfaces utilisateur</h2>
+					<p class="back_card_text_line">Service de conception d'interfaces utilisateur centrées sur l'utilisateur, 
+						en alliant créativité et techniques de pointe. Grâce à une solide expérience en développement front-end, 
+						Nos transformons vos idées en interfaces modernes et intuitives.</p>
+					
+					<p class="back_card_text_line">Chaque projet est abordé avec une attention particulière 
+						aux détails esthétiques tout en assurant une fluidité de navigation optimale. 
+						Nous mettons un point d'honneur à respecter les standards actuels de design et d'accessibilité, 
+						garantissant ainsi une expérience utilisateur riche et inclusive.</p>
+					
+					<p class="back_card_text_line">Notre approche rigoureuse permet de créer des interfaces non seulement visuellement 
+						attrayantes, mais aussi hautement performantes, adaptées aux exigences actuelles du web. 
+						En collaborant avec nous, vous bénéficierez d'une interface qui non seulement attire l'œil, 
+						mais qui retient aussi l'utilisateur par sa simplicité et son efficacité.</p> 
+					
+					<a href="#section-5" aria-label="Dirige vers le formulaire de contact" role="button">Nous contacter</a>
+				</div>
+			</div>
+			
+			<div id="services-modal2" class="services_modal">
+				<div class="services-modal-content">
+					<span class="modal_services_close"
+						aria-label="Ferme la fenêtre modale"
+						role="button"
+						>&times;
+					</span>
+					<div>
+						<img src="./images/icons/icon-seo-1-full-dark-blue.svg" 
+						alt="Icone symbole d'optimisation du SEO, loupe sur un pc avec un graphe" 
+						id="icon-service-optimization-modal">
+					</div>
+					<h2>Optimisation SEO</h2>
+					<p class="back_card_text_line">Nous vous propose un service d'optimisation SEO pour garantir 
+						que vos projets ne soient pas seulement esthétiques, 
+						mais aussi hautement visibles sur les moteurs de recherche.</p>
+						
+					<p class="back_card_text_line">Fort de mon expertise en référencement naturel, 
+						nous veillons à ce que chaque aspect technique et sémantique de votre site soit 
+						optimisé pour maximiser son positionnement.</p>
+						
+					<p class="back_card_text_line">L'optimisation SEO englobe des éléments clés tels que 
+						l'amélioration de la vitesse de chargement, la structuration du contenu, et 
+						l'optimisation des balises HTML. </p>
+						
+					<p class="back_card_text_line">Nous mettons également en place des stratégies pour 
+						augmenter l'autorité de votre site, 
+						en travaillant sur des liens internes et externes de qualité.</p>
+						
+					<p class="back_card_text_line">Notre approche sur mesure assure que votre projet attire non seulement les utilisateurs, 
+						mais qu'il capte également l'attention des moteurs de recherche, 
+						vous permettant ainsi de véritablement
+						vous distinguer. </p>
+	
+					<a href="#section-5" aria-label="Dirige vers le formulaire de contact" role="button">Nous contacter</a>
+				</div>
+			</div>
+	
+			<div id="services-modal3" class="services_modal">
+				<div class="services-modal-content">
+					<span class="modal_services_close"
+						aria-label="Ferme la fenêtre modale"
+						role="button"
+						>&times;
+					</span>
+					<div>
+						<img src="./images/icons/icon-project-plan-1-full-dark-blue.svg" 
+						alt="Icone symbole de gestion de projet, personnage, rouage et planning" 
+						id="icon-service-leadership-strategy-modal">
+					</div>
+					<h2>Gestion de projets full-stack</h2>
+	
+					<p class="back_card_text_line">Nous proposons une gestion de projet full-stack complète, 
+						couvrant tous les aspects du développement; du front-end au back-end, avec des technologies telles que, 
+						entre autres, React, Angular, et Vue.js pour le front-end, et Node.js, PHP (avec Symphony et Laravel), 
+						Django, Ruby on Rails pour le back-end pour interagir avec tout type de bases de données.</p>
+					
+					<p class="back_card_text_line">	Ce service inclut la mise à disposition d'un Responsable de Mission dédié qui
+						assure une planification minutieuse, le suivi constant, et l'ajustement des priorités pour respecter 
+						les échéances fixées en conformité avec les principes du développement Agile.</p> 
+						
+					<p class="back_card_text_line">Grâce à une communication claire et régulière, 
+						vous êtes toujours informé de la réelle avancée de votre projet.</p> 
+						
+					<p class="back_card_text_line">Notre approche proactive permet de gérer les imprévus de manière efficace, 
+						minimisant ainsi les risques de retard.</p> 
+						
+					<p class="back_card_text_line">Travaillant en collaboration étroite avec vous 
+						et votre équipe de développeurs spécialisés dédiée, chaque aspect de votre projet et parfaitement maîtrisé.</p> 
+						
+					<p class="back_card_text_line">Nous travaillons à vous offrir une gestion de projet sans stress, 
+						où chaque détail est pris en charge, assurant ainsi une livraison de haute qualité dans les délais impartis.</p>
+					
+					<a href="#section-5" aria-label="Dirige vers le formulaire de contact" role="button">Nous contacter</a>
+				</div>
+			</div>
+	
+			
+			
+			<!-- other modals here with different ids -->
+			
+	
+			<!-- END BACK CARD' MODALS -->
+	
+			<section class="section section_4 realisations" id="section-4" aria-label="Section Réalisations avec un carrousel de projets">
+	
+	
+				<div class="left_side_section_4"></div>
+				
+				<div class="carousel-section">
+					<h1>DERNIERS PROJETS</h1>
+					
+					<div class="carousel-container">
+						<div class="main-photo-container">
+							<img src="./images/carousel/Argent_Bank_2.png" alt="Photo principale" class="main-photo" id="main-photo">
+							<div class="info-container">
+								<h2 id="photo-title">Titre de la Photo</h2>
+								<p id="photo-description">Description de la photo...</p>
+								
+								<div class="line_under_description">
+	
+									<button class="expand_description" 
+										id="expand-description" 
+										aria-label="Lire la suite de la description du projet dans une modale">
+										Lire la suite</button>
+									
+									<div id="full-description-modal" class="modal_description">
+										<div class="modal-content_description">
+											<span class="close-button_description" 
+											aria-label="Ferme la fenêtre modale"
+											role="button"
+											>&times;
+										</span>
+											<p id="full-description">Description complète de la photo...</p>
+										</div>
+									</div>
+	
+									<div class="api-usage-container">
+										<label for="api-usage">Utilise une API :</label>
+										<input type="checkbox" id="api-usage" name="api-usage" disabled>
+									</div>
+								</div>
+								
+								<div class="pie-chart-container">
+									<canvas id="pie-chart"></canvas>
+								</div>
+								
+								<div class="visit-website-container">
+									<div id="photo-legend">Légende du graphe</div>
+									<!-- <a href="#" id="visit-website" aria-label="Accéder au projet dans un nouvel onglet" role="button">Accès projet</a> -->
+									<button class="visit-website-btn" 
+										id="visit-website" 
+										aria-label="Accéder au projet dans un nouvel onglet">Accès projet
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="thumbnails-container">
+							<button class="arrow left-arrow">&lt;</button>
+							<div class="thumbnails-wrapper">
+	
+								<!-- Add newest projects 'miniatures here -->
+				
+								<!-- Project 1 -->
+								
+									<img src="./images/carousel/Argent_Bank_2.png" alt="Miniature 1" class="thumbnail" 
+									
+									data-photo="./images/carousel/Argent_Bank_2.png" 
+									data-title="App. bancaire - React / Redux" 
+					
+									data-description=" 
+									|Gestion full-stack d'une application bancaire responsive. 
+	
+									|Intégration du front-end avec le back-end 
+									via des appels API. Ecriture des appels à l'API REST pour connecter les deux parties de 
+									l'application, pour assurer une communication fluide entre le client et le serveur.
+									
+									|Utilisation de React pour développer l'interface utilisateur de l'application bancaire, 
+									en se focalisant sur la création d'un tableau de bord complet et responsive pour les 
+									utilisateurs. 
+									
+									|Redux a été utilisé pour gérer les données de l'application afin de maintenir un état global 
+									cohérent à travers l'application, notamment par la mise à jour immédiate du nom d'utilisateur.
+									
+									|Utilisation de OpenAPI Initiative (Swagger) pour définir les points d'accès de l'API et modéliser 
+									les interactions avec les données des transactions. 
+									
+									|Utilisation de Node.js pour exécuter le code JavaScript côté serveur.
+	
+									|Base de données : mongoDB.
+	
+									|NB: Projet éducatif issu du parcours &quot;Intégrateur Web&quot; 2024 de l'entreprise de formation 
+									Openclassrooms dont tout ou partie des éventuels aspects de UX/UI et back-end ont été délivrés par 
+									Openclassrooms.
+	
+									" 
+	
+									data-legend="Application test de Openclassrooms" 
+									data-chart="2,34,64"
+									data-url="https://github.com/CatalysePro/OC_P11"
+									data-api="true"
+									data-tools="0,1,2,3,4,6,9,12,13">
+								
+	
+								<!-- Project 2 -->
+								<img src="./images/carousel/Kasa_2.png" alt="Miniature 2" class="thumbnail" 
+								data-photo="./images/carousel/Kasa_2.png" 
+								data-title="App. immo. - React / React Router"
+	
+								data-description=" 
+									|Gestion du front-end d'une application de location immobilière responsive. 
+	
+									|Création de plusieurs interfaces utilisateur via la bibliothèque JavaScript React .
+									
+									|Utilisation de la bibliothèque React Router pour transformer l'application React en SPA 
+									(single page application) en configurant la navigation entre les différentes pages de 
+									l'application. 
+									
+									|Utilisant des données simulées extraites d'un fichier JSON.
+									
+									|Utilisation de Node.js pour exécuter le code JavaScript hors navigateur.
+	
+									|Utilisation de Figma pour l'intégration des maquettes.
+	
+									|NB: Projet éducatif issu du parcours &quot;Intégrateur Web&quot; 2024 de l'entreprise de formation 
+									Openclassrooms dont tout ou partie des éventuels aspects de UX/UI et back-end ont été délivrés par 
+									Openclassrooms.
+									" 
+								
+								data-legend="Application test de Openclassrooms" 
+								data-chart="2,65,33"
+								data-url="https://github.com/CatalysePro/OC_P8"
+								data-api="false"
+								data-tools="0,1,2,3,5,11,12,13">
+				
+								<!-- Project 3 -->
+								<img src="./images/carousel/Nina_C_2.png" alt="Miniature 3" class="thumbnail" 
+								data-photo="./images/carousel/Nina_C_2.png" 
+								data-title="Optimisation du SEO d'un site web" 
+	
+								data-description="
+								|Objectif : 
+								
+								|Amélioriation de la performance et de l'accessibilité d'un site web de photographe.
+	
+								|Actions & résultats :
+	
+								|* Identification des problèmes de chargement et de référencement.
+	
+								|* Utilisation des outils de diagnostic &quot;Light House&quot; et &quot;Waveb&quot;.
+	
+								
+								|* Amélioration de la vitesse de chargement, de la structure du code, et du référencement.
+								
+								|* Enrichissement qualitatif et technique du code HTML.
+								
+	
+								|Genèse d'un rapport &quot;Light House&quot; à 100% sur les 4 critères qualitatifs (Performances,
+								Accessibilité, Bonnes pratiques et SEO).
+								
+								|Elaboration de recommandations dédiées client.
+	
+								|NB: Projet éducatif issu du parcours &quot;Intégrateur Web&quot; 2024 de l'entreprise de formation 
+								Openclassrooms dont tout ou partie des éventuels aspects de UX/UI et back-end ont été délivrés par 
+								Openclassrooms.
+								" 
+	
+								data-legend="Application test de Openclassrooms" 
+								data-chart="56,19,25"
+								data-url="https://catalysepro.github.io/OC_P9/"
+								data-api="false"
+								data-tools="0,1,2,12">
+	
+								<!-- Project 4 -->
+								<img src="./images/carousel/Qwenta_1.png" alt="Miniature 4" class="thumbnail" 
+								data-photo="./images/carousel/Qwenta_1.png" 
+								data-title="Planification de projet" 
+	
+								data-description="
+								
+								|Objectif : 
+								
+								|Planification du développement d'un site web d'élaboration de menus sur mesure
+	
+								|Actions & résultats :
+	
+								|Sur la base de maquettes, des spécifications fonctionnelles et des User Stories :
+	
+								|* Elaboration de l'approche méthodologique de la gestion du projet (SCRUMBAN).
+	
+								|* Rédaction des spécifications techniques complètes du projet 
+								(Client : React - Auth : Auth0 - Server : Node.js / PostgreSQL - Hosting : AWS). 
+	
+								|* Utilisation d'un outil de gestion de projet : Kanban via Notion.so.
+	
+								|* Mise en place d'une solution de veille technologique basé sur Feedly.com.
+								
+								|* Présentation client.
+								
+	
+								|NB: Projet éducatif issu du parcours &quot;Intégrateur Web&quot; 2024 de l'entreprise de formation 
+								Openclassrooms dont tout ou partie des éventuels aspects de UX/UI et back-end ont été délivrés par 
+								Openclassrooms.
+								
+								" 
+	
+								data-legend="Application test de Openclassrooms" 
+								data-chart="5,30,65"
+								data-url="https://www.figma.com/proto/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?node-id=0-6&t=tJm8joqB25RNOax5-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=0%3A658"
+								data-api="true"
+								data-tools="0,1,2,3,8,10,11,12,13">
+	
+								<!-- Project 5 -->
+								<img src="./images/carousel/Architecte_SB_1.png" alt="Miniature 1" class="thumbnail" 
+								data-photo="./images/carousel/Architecte_SB_1.png" 
+								data-title="Site web Architecte dynamique" 
+				
+								data-description=" 
+								
+								|Objectif :
+								
+								|Créez une page web dynamique avec JavaScript;
+	
+								|Récupérer les données utilisateurs dans le JavaScript via des formulaires;
+	
+								|Manipuler les éléments du DOM avec JavaScript;
+	
+								|Gérer les événements utilisateurs avec JavaScript.
+	
+								|Actions & résultats :
+	
+								|* Rappatriement des données via l'API et création de la galerie photo avec filtrage par catégorie;
+								
+								|* Formulaire de connexion administrateur;
+	
+								|* Configuration de l'environnement administrateur;
+	
+								|* Fonctionnalités d'ajout et de supression de travaux via l'API;
+	
+								|* Mise à jour dynmaique de l'ensemble.
+	
+								
+								|NB: Projet éducatif issu du parcours &quot;Intégrateur Web&quot; 2024 de l'entreprise de formation 
+								Openclassrooms dont tout ou partie des éventuels aspects de UX/UI et back-end ont été délivrés par 
+								Openclassrooms.
+								
+								" 
+				
+								data-legend="Application test de Openclassrooms" 
+								data-chart="8,27,65"
+								data-url="https://github.com/CatalysePro/OC_P6_New"
+								data-api="true"
+								data-tools="0,1,2,6,7,10,11,12,13">
+	
+	
+								<!-- Move oldest project's miniatures here -->
+				
+								
+				
+							</div>
+							<button class="arrow right-arrow">&gt;</button>
+						</div>
+					</div>
+					
+				</div>
+				<div class="right_side_section_4 tools news_flow">
+					
+					<h1>Principales ressources sollicitées</h1>
+					<p></p>
+					<div class="tools_container">
+						
+						<img src="./images/logos/logo-node-js-2.svg" alt="logo Node-js" class="logo_it_tools" id="logo-node-js">
+						<img src="./images/logos/logo-github-2.svg" alt="logo Github" class="logo_it_tools" id="logo-github">
+						<img src="./images/logos/logo-git.svg" alt="logo Git" class="logo_it_tools" id="logo-git">
+						<img src="./images/logos/logo-react-1.png" alt="logo React JS" class="logo_it_tools" id="logo-react-js">
+						<img src="./images/logos/logo-redux-1.png" alt="logo Redux JS" class="logo_it_tools" id="logo-redux-js">
+						<img src="./images/logos/logo-react-router-color.svg" alt="logo React Router" class="logo_it_tools" id="logo-react-router">
+						<img src="./images/logos/logo-OpenAPI-Initiative-3.svg" alt="logo Open API Initiative" class="logo_it_tools" id="logo-swagger">
+						<img src="./images/logos/logo-Sqlite-by-stickpng_com.png" alt="logo SQLite" class="logo_it_tools" id="logo-SQLite">
+						<img src="./images/logos/logo-PostgreSQL-by-stickpng_com.svg" alt="logo PostgreSQL" class="logo_it_tools" id="logo-PostgreSQL">
+						<img src="./images/logos/logo-mongoDB-1.svg" alt="logo mongoDB" class="logo_it_tools" id="logo-mongoDB">
+						<img src="./images/logos/logo-Notion-2.png" alt="logo Notion" class="logo_it_tools" id="logo-notion">
+						<!-- <div class="logo_it_tools"></div> -->
+						<img src="./images/logos/logo-figma.svg" alt="logo Figma" class="logo_it_tools logo_figma" id="logo-figma">
+						<img src="./images/logos/UX-UI-Team_5.png" alt="icone Team UX / UI" class="logo_it_tools" id="icon-team-ux-ui">
+						<img src="./images/logos/Team-BackEnd_6.png" alt="icone Team Back-End" class="logo_it_tools" id="icon-team-back-end">
+					</div>
+				</div>
+			</section>
+			
+			<section class="section section_5 contact" id="section-5">
+				<div id="particles-js-2"></div> 
+				<div class="watermark contact_title">CONTACT</div>
+				<div class="contact_form_container">
+					<form id="contact-form" class="contact-form">
+						<h1>Ecrivez-nous</h1>
+						<div class="form-group">
+							<label for="name">Nom:</label>
+							<input type="text" id="name" name="name" autocomplete="name">
+						</div>
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" autocomplete="email">
+						</div>
+						<div class="form-group">
+							<label for="message">Message:</label>
+							<textarea id="message" name="message" rows="6"></textarea>
+						</div>
+						<button type="submit" class="contact_form_button">Envoyer</button>
+					</form>
+				</div>
+				<div id="alert" class="alert"></div>
+			</section>
+	
+		</main>
+	
+		<footer class="footer">
+	
+			<div id="particles-js-3"></div> 
+	
+			<div class="footer_info">
+				<ul class="footer_menu">
+					
+					<li class="footer_menu__item link_credits_modal">
+						<a class="footer_menu__link" href="#"
+						aria-label="Ouvre une fenêtre modale" 
+						role="button">
+						Crédits illustrations
+						</a>
+					</li>
+					
+				</ul>
+			
+				
+	
+				<p>&copy;2024  Catalyse.Pro  |  Tous droits réservés</p>
+	
+				<ul class="social-icon">
+					<li class="social-icon__item">
+						<a class="social-icon__link" 
+							href=" https://facebook.com."
+							aria-label="Dirige vers la page d'accueil de Facebook" 
+							role="button"
+							target="_blank" 
+							rel="noopener noreferrer">
+							<img src="./images/social/facebook.svg" alt="Logo Facebook" id="logo-facebook-black">
+						</a>
+					</li>
+					<li class="social-icon__item">
+						<a class="social-icon__link" 
+							href=" https://x.com"
+							aria-label="Dirige vers la page d'accueil de X (Twitter)" 
+							role="button"
+							target="_blank" 
+							rel="noopener noreferrer">
+							<div class="svg-container">
+							<img src="./images/social/logo-twitter-X-dark-blue.svg" alt="Logo Twitter-X" id="logo-twitter-x-dark-blue">
+							</div>
+						</a>
+					</li>
+					
+					<li class="social-icon__item">
+						<a class="social-icon__link" 
+							href="https://www.instagram.com/"
+							aria-label="Dirige vers la page d'accueil de Instagram" 
+							role="button"
+							target="_blank" 
+							rel="noopener noreferrer">
+							<img src="./images/social/instagram.svg" alt="Logo Instagram" id="logo-instagram-black">
+						</a>
+					</li>
+				</ul>
+			</div>
+	
+		</footer>
+	
+		<div id="credits-modal" class="credits_modal">
+			
+			
+			<div class="credits-modal-content">
+				<span class="modal_credits_close"
+					aria-label="Ferme la fenêtre modale"
+					role="button"
+					>&times;
+				</span>
+	
+				<div>
+					<img src="./images/icons/icon-ribbon-framed-dark-blue-2.svg" 
+					alt="Icone symbole de reconnaissance, ruban encadrement discontinu" id="icon-credits-1">
+				</div>
+	
+				<h1>Illustrations credits</h1>
+				<h2>"Credit where credit's due"</h2>
+	
+				<p class="credits_subtitle underlined">Header</p>
+				<p> Icon About me : Adapatation/modification by Catalyse.Pro based on picture coming from Freepik.com. </p>
+				<p> Icon Cards : Adapatation/modification by Catalyse.Pro based on picture coming from Freepik.com. </p>
+				<p> Icon Open book : Adapatation/modification by Catalyse.Pro based on picture coming from Freepik.com. </p>
+				<p> Icon Envelope with a letter : Adapatation/modification by Catalyse.Pro based on picture coming from Freepik.com. </p>
+				
+				<br>
+				<p class="credits_subtitle underlined">About section</p>
+				<p> Background picture : Full credit to Freepik.com. </p>
+				
+				<br>
+				<p class="credits_subtitle underlined">Services section</p>
+				<p> Icon forms (interface) : full credit to Freepik.com.</p>
+				<p> Icon SEO : full credit to Freepik.com.</p>
+				<p> Icon projects management : full credit to Freepik.com.</p>
+				
+				<br>
+				<p class="credits_subtitle underlined">Realisations section</p>
+				<p> Carousel : See mentions about websites photo credit. </p>
+				<p class="underlined"> Resources sub-section :</p>
+				<p>Logo Node JS : full credit to the concerned organisation. </p>
+				<p>Logo Github : full credit to the concerned organisation. </p>
+				<p>Logo Git : full credit to the concerned organisation. </p>
+				<p>Logo React : full credit to the concerned organisation. </p>
+				<p>Logo Redux : full credit to the concerned organisation. </p>
+				<p>Logo React Router : full credit to the concerned organisation. </p>
+				<p>Logo OpenAPI : full credit to the concerned organisation. </p>
+				<p>Logo SQLite : full credit to the concerned organisation. </p>
+				<p>Logo PostgreSQL : full credit to the concerned organisation. </p>
+				<p>Logo mongoDB : full credit to the concerned organisation. </p>
+				<p>Logo Notion : full credit to the concerned organisation. </p>
+				<p>Logo Figma : full credit to the concerned organisation. </p>
+				<p>Logo UX/UI Team : Catalyse.Pro original creation based on Canva resources.</p>
+				<p>Logo BackEnd Team : Catalyse.Pro original creation based on Canva resources.</p>
+				<br>
+				<p class="credits_subtitle underlined">Footer</p>
+				<p>Logo Facebook : full credit to the concerned organisation. </p>
+				<p>Logo Twitter-X : full credit to the concerned organisation. </p>
+				<p>Logo Instagram : full credit the concerned organisation. </p>
+	
+				<br>
+				<a href="#section-5" id="credits-contact-link"
+					aria-label="Dirige vers le formulaire de contact" 
+					role="button">
+					Contact us
+				</a>
+				
+			</div>
+		</div>
+	
+	
+	
+		<!-- NON CRITICAL SCRIPTS -->
+	
+		<!-- minify & defer scripts + 2nd line at the beginning with attributes rel="preload" & as="script" for better reactivity"-->
+				
+	
+		<!-- <link rel="preload" href="./assets/maugallery.min.js" as="script">
+		<script src="./assets/maugallery.min.js" defer></script>  -->
+		<!-- manual min ref modification done -->
+	
+		<!-- <link rel="preload" href="./assets/scripts.min.js" as="script">
+		<script src="./assets/scripts.min.js" defer></script>  -->
+		<!-- manual min ref modification done -->
+	
+		<script defer src="./scripts/main.js"></script>
+		<script defer src="./scripts/scrollEffects.js"></script>
+		<script defer src="./scripts/servicesModals.js"></script>
+		<script defer src="./scripts/carousel.js"></script>
+		<script defer src="./scripts/clickUrlOpenNewTab.js"></script>
+		<script defer src="./scripts/contactForm.js"></script>
+		<script defer src="./scripts/creditsModal.js"></script>
+	
+		
+	
+	</body>
+
+</html>
